@@ -1,13 +1,17 @@
-function App() {
-  return <div> Hello World! </div>
-}
-
 function Homepage() {
   return <div> Welcome to my site </div>
 }
 
 function About() {
   return <div> A tiny react demo site </div>
+}
+
+// App component renders my Homepage component using <component />
+// components rendering components
+function App() {
+  return (
+    <Homepage />
+    )
 }
 
 
