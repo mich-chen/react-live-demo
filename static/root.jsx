@@ -6,11 +6,28 @@ function About() {
   return <div> A tiny react demo site </div>
 }
 
+function ShoppingList() {
+  return (
+    <ul>
+      <li>milk</li>
+      <li>kombucha</li>
+      <li>pineapple</li>
+      <li>hot sauce </li>
+    </ul>
+  )
+}
+
+
+
 // App component renders my Homepage component using <component />
 // components rendering components
 function App() {
   return (
-    <Homepage />
+    // can only return one thing, so combine them into a single div
+    <div>
+      <Homepage />
+      <ShoppingList />
+    </div>
     )
 }
 
