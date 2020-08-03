@@ -6,13 +6,21 @@ function About() {
   return <div> A tiny react demo site </div>
 }
 
+
+function ShoppingListItems(props) {
+  return <li> {props.item} </li>
+}
+
+// this is now rendering shoppinglistitems
 function ShoppingList() {
   return (
     <ul>
-      <li>milk</li>
-      <li>kombucha</li>
-      <li>pineapple</li>
-      <li>hot sauce </li>
+    
+      <ShoppingListItems item="milk" />
+      <ShoppingListItems item="kombucha" />
+      <ShoppingListItems item="pineapple" />
+      <ShoppingListItems item="hot sauce" />
+      
     </ul>
   )
 }
@@ -27,6 +35,7 @@ function App() {
     <div>
       <Homepage />
       <ShoppingList />
+      <About />
     </div>
     )
 }
